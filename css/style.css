@@ -1,0 +1,69 @@
+:root {
+    --black: #000;
+    --yellow: #d8b415;
+    --dark-orange: #eb910b;
+    --white: #fff;
+    --light: rgb(212, 0, 255);
+  }
+  
+  body {
+    align-items: center;
+    background: linear-gradient(45deg, #3a3b3b 0%,#000000 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    color: var(--dark-orange);
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .drum {
+    background: linear-gradient(to bottom, #706e6e 0%,#332f2f 100%);
+    box-shadow: 6px 8px 0 6px rgb(15, 0, 12), 10px 10px 10px #000;
+    border-radius: 30px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+  }
+  
+  .keyboard {
+    background-color: var(--black);
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 var(--cinza);
+    color: var(--yellow);
+    cursor: pointer;
+    height: 120px;
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: 120px;
+    text-align: center;
+    width: 120px;
+  }
+  
+  .keyboard.ativa,
+  .keyboard:active {
+    background-color: var(--dark-orange);
+    border: 4px solid  var(--dark-orange);
+    box-shadow: 3px 3px 0 var(--dark-orange) inset;
+    color: var(--black);
+    outline: none;
+  }
+  
+  .keyboard.focus,
+  .keyboard:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px var(--light);
+  }
+  
+  .keyboard.active:focus,
+  .keyboard:active:focus {
+    box-shadow: 3px 3px 0 var(--dark-orange) inset, 1px 1px 10px var(--light);
+  }
+  
+  
